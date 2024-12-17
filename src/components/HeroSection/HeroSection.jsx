@@ -21,39 +21,39 @@ import { Navigation, Autoplay } from "swiper/modules";
 import saleBanner from "../../assets/sale-campaign-banner-p8vzf.gif"; // Correct import path
 
 // Category Section Component
-// const CategorySection = () => {
-//   const categories = [
-//     { name: "Mobiles", image: mobiles }, 
-//     { name: "Wireless Earbuds", image: earbuds },
-//     { name: "Smart Watches", image: watches },
-//     { name: "Trimmers Shaver", image: trimmer },
-//     { name: "Power Banks", image: powerbanks },
-//     { name: "Wall Chargers", image: chargers },
-//     { name: "Bluetooth Speakers", image: speakers },
-//     { name: "Tablets", image: tablets },
-//   ];
+const CategorySection = () => {
+  const categories = [
+    { name: "Mobiles", image: mobiles }, 
+    { name: "Wireless Earbuds", image: earbuds },
+    { name: "Smart Watches", image: watches },
+    { name: "Trimmers Shaver", image: trimmer },
+    { name: "Power Banks", image: powerbanks },
+    { name: "Wall Chargers", image: chargers },
+    { name: "Bluetooth Speakers", image: speakers },
+    { name: "Tablets", image: tablets },
+  ];
 
-//   return (
-//     <div className="flex justify-center items-center w-full">
-//       <div className="flex items-center px-4 py-2 bg-white shadow-md flex-wrap justify-center w-full">
-//         {categories.map((category, index) => (
-//           <div
-//             key={index}
-//             className="flex flex-col items-center justify-center mx-4 mb-1 group"
-//           >
-//             <img
-//               src={category.image}
-//               alt={category.name}
-//               className="w-12 h-12 object-contain mb-1"
-//             />
-//             <p className="text-center text-sm font-medium">{category.name}</p>
-//             <div className="w-full mt-1 h-0.5 bg-transparent group-hover:bg-blue-500 transition-all"></div>
-//           </div>
-//         ))}
-//       </div>
-//     </div>
-//   );
-// };
+  return (
+    <div className="flex justify-center items-center w-full">
+      <div className="flex items-center px-4 py-2 bg-white shadow-md flex-wrap justify-center w-full">
+        {categories.map((category, index) => (
+          <div
+            key={index}
+            className="flex flex-col items-center justify-center mx-4 mb-1 group"
+          >
+            <img
+              src={category.image}
+              alt={category.name}
+              className="w-12 h-12 object-contain mb-1"
+            />
+            <p className="text-center text-sm font-medium">{category.name}</p>
+            <div className="w-full mt-1 h-0.5 bg-transparent group-hover:bg-blue-500 transition-all"></div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
 
 // Hero Section Component
 const HeroSection = () => {
@@ -132,4 +132,4 @@ const HeroSection = () => {
   );
 };
 
-export default HeroSection;
+export { HeroSection, CategorySection };
