@@ -7,18 +7,18 @@ import powerbanks from "../../assets/power-banks.svg";
 import chargers from "../../assets/mobile-chargers.svg";
 import speakers from "../../assets/bluetooth-speakers.svg";
 import tablets from "../../assets/tablets.svg";
-import slide1Image from "../../assets/pakistan-priceoye-slider-kvijy.jpg";
-import slide2Image from "../../assets/pakistan-priceoye-slider-r8jlg.jpg";
-import slide3Image from "../../assets/pakistan-priceoye-slider-y35ps.jpg";
-import slide4Image from "../../assets/pakistan-priceoye-slider-y35ps (1).jpg";
-import slide5Image from "../../assets/pakistan-priceoye-slider-jlb2p (1).jpg";
-import slide6Image from "../../assets/bluetooth-speakers.svg";
-import slide7Image from "../../assets/pakistan-priceoye-slider-y35ps.jpg";
+import slide1Image from "../../assets/pakistan-priceoye-slider-l8bv7.jpg";
+import slide2Image from "../../assets/pakistan-priceoye-slider-rsyab (1).jpg";
+import slide3Image from "../../assets/pakistan-priceoye-slider-kvijy.jpg";
+import slide4Image from "../../assets/pakistan-priceoye-slider-xcxql.jpg";
+import slide5Image from "../../assets/pakistan-priceoye-slider-5.jpg";
+import slide6Image from "../../assets/pic-6.jpg";
+import slide7Image from "../../assets/pakistan-priceoye-slider-jlb2p-7.jpg";
 import { Swiper, SwiperSlide } from "swiper/react"; // Import Swiper and SwiperSlide
 import "swiper/css"; // Import Swiper styles
 import "swiper/css/navigation"; // Import Navigation styles
 import { Navigation, Autoplay } from "swiper/modules";
-import saleBanner from "../../assets/sale-campaign-banner-p8vzf.gif"; // Correct import path
+import saleBanner from "../../assets/banner pic.gif"; // Correct import path
 
 // Category Section Component
 const CategorySection = () => {
@@ -82,7 +82,7 @@ const HeroSection = () => {
             src={slide2Image}
             alt="Slide 2"
             className="w-full h-full object-cover"
-          />
+          /> 
         </SwiperSlide>
         <SwiperSlide>
           <img
