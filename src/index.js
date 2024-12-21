@@ -11,6 +11,7 @@ import Error from './components/error/Error';
 import UpdateProfile from "./components/my-account/profile/Profile"
 import MyAccount from './components/my-account/MyAccount';
 import ProtectRoute from './components/protect/Protect';
+import TrackMyOrder from './components/header/track-my-order/TrackMyOrder';
 
 const router = createBrowserRouter([
     {
@@ -32,6 +33,10 @@ const router = createBrowserRouter([
           {
             path: "account",
             element: <ProtectRoute> <MyAccount /></ProtectRoute>,
+          },
+          {
+            path: "TrackMyOrder",
+            element: <ProtectRoute> <TrackMyOrder /></ProtectRoute>,
           },
           {
             path: "account/profile",
