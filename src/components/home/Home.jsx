@@ -6,6 +6,7 @@ import Products from './products/Products'
 import { Box } from '@mui/material'
 import BestSellers from './best-sellers/BestSellers'
 import Header from '../header/Header'
+import SmartWatches from './smart-watches/SmartWatches'
 
 const Home = () => {
   return (
@@ -18,6 +19,7 @@ const Home = () => {
       <Gallery/>
       <Products/>
       <BestSellers/>
+      <SmartWatches />
     </Box>
     </>
   )
