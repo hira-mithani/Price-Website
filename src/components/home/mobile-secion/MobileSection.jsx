@@ -1,7 +1,7 @@
 import { Box, Button, Typography } from "@mui/material";
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-
+import Compain from '../../../assets/static-banner-bnpl-v4.jpg'
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/grid";
@@ -10,16 +10,18 @@ import "swiper/css/navigation";
 
 // import required modules
 import { Grid } from "swiper/modules";
-import { Navigation } from "swiper/modules";
+// import { Navigation } from "swiper/modules";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
+import { Navigation}  from 'swiper/modules';
 
-const SmartWatches = () => {
+
+const  MobileSection = () => {
   const product = [
     {
       id: 1,
       image:
-        " https://images.priceoye.pk/g-tide-r1-smart-watch-pakistan-priceoye-xlubt-270x270.webp",
+        "https://images.priceoye.pk/realme-13-plus-5g-pakistan-priceoye-78si6-270x270.webp",
       title: "Redmi Buds 6 Active Wireless Earbuds",
       currentPrice: 4549,
       originalPrice: 7399,
@@ -30,7 +32,7 @@ const SmartWatches = () => {
     {
       id: 2,
       image:
-        "https://images.priceoye.pk/mibro-watch-lite3-pro-pakistan-priceoye-v5v3v-270x270.webp",
+        "https://images.priceoye.pk/realme-13-plus-5g-pakistan-priceoye-78si6-270x270.webp",
       title: "Realme T100 Wireless Earbuds",
       currentPrice: 4999,
       originalPrice: 7000,
@@ -41,7 +43,7 @@ const SmartWatches = () => {
     {
       id: 3,
       image:
-        "https://images.priceoye.pk/ultra-smart-watch-7-in-1-pakistan-priceoye-3ybh3-270x270.webp",
+        " https://images.priceoye.pk/vivo-v40e-pakistan-priceoye-gylye-270x270.webp",
       title: "Nothing Buds Pro 2",
       currentPrice: 13499,
       originalPrice: 20000,
@@ -52,7 +54,7 @@ const SmartWatches = () => {
     {
       id: 4,
       image:
-        "https://images.priceoye.pk/realme-watch-pakistan-priceoye-g61ky-270x270.webp",
+        "https://images.priceoye.pk/xiaomi-redmi-a3-pakistan-priceoye-z5m8c-270x270.webp",
       title: "Anker R50i Earbuds",
       currentPrice: 4611,
       originalPrice: 7199,
@@ -63,7 +65,7 @@ const SmartWatches = () => {
     {
       id: 5,
       image:
-        "https://images.priceoye.pk/mibro-watch-lite-3-pakistan-priceoye-nq89u-270x270.webp",
+        "https://images.priceoye.pk/samsung-galaxy-a55-5g-pakistan-priceoye-d66z3-270x270.webp",
       title: "Soundpeats Engine4 Wireless Earbuds",
       currentPrice: 10518,
       originalPrice: 14000,
@@ -74,7 +76,7 @@ const SmartWatches = () => {
     {
       id: 6,
       image:
-        "https://images.priceoye.pk/mibro-watch-lite3-pro-pakistan-priceoye-v5v3v-270x270.webp",
+        "https://images.priceoye.pk/tecno-spark-30-pakistan-priceoye-rcs5e-270x270.webp",
       title: "Samsung Galaxy Buds 3 Pro ",
       currentPrice: 49799,
       originalPrice: 69999,
@@ -86,7 +88,7 @@ const SmartWatches = () => {
     {
       id: 7,
       image:
-        "https://images.priceoye.pk/qcy-t13-anc-2-pakistan-priceoye-uvlbc-270x270.webp",
+        "https://images.priceoye.pk/itel-s24-pakistan-priceoye-sabyj-270x270.webp",
       title: "QCY T13 ANC 2",
       currentPrice: 5499,
       originalPrice: 6000,
@@ -97,7 +99,7 @@ const SmartWatches = () => {
     {
       id: 8,
       image:
-        "https://images.priceoye.pk/realme-watch-pakistan-priceoye-g61ky-270x270.webp",
+        "https://images.priceoye.pk/realme-c61-pakistan-priceoye-v5h3g-270x270.webp",
       title: "Realme Buds T110",
       currentPrice: 4999,
       originalPrice: 10500,
@@ -108,7 +110,7 @@ const SmartWatches = () => {
     {
       id: 9,
       image:
-        "https://images.priceoye.pk/audionic-airbud-550-pakistan-priceoye-o6fve-270x270.webp",
+        "https://images.priceoye.pk/oppo-a3-pakistan-priceoye-hn4ho-270x270.webp",
       title: "Audionic Airbud 550",
       currentPrice: 3811,
       originalPrice: 9990,
@@ -119,7 +121,7 @@ const SmartWatches = () => {
     {
       id: 10,
       image:
-        " https://images.priceoye.pk/samsung-galaxy-watch-6-classic-43mm-pakistan-priceoye-15dli-270x270.webp",
+        "https://images.priceoye.pk/oppo-a3-pakistan-priceoye-hn4ho-270x270.webp",
       title: "Imiki MT2 Wireless Erbuds",
       currentPrice: 3899,
       originalPrice: 6999,
@@ -131,7 +133,12 @@ const SmartWatches = () => {
 
   return (
     <>
+    
      <Box className="bg-gray-200">
+     <Box className="py-5 lg:py-7 md:px-12 bg-slate-100">
+  <img src={Compain} alt="" className="w-full"/>
+</Box>
+
      <Box
         sx={{
           backgroundImage: `url('https://static.priceoye.pk/images/categories/section-smart-watches-bg.png')`,
@@ -144,7 +151,7 @@ const SmartWatches = () => {
       >
         <Box className="container mx-auto pt-7 mb:pt-16 pb-7 flex justify-between items-center px-3">
           <Typography className="text-white"variant="h5">
-          Latest Smart Watches
+          Latest Mobiles
           </Typography>
           <Button
             className="!text-black !bg-white !hover:text-slate-300 !capitalize"
@@ -229,4 +236,4 @@ const SmartWatches = () => {
   );
 };
 
-export default SmartWatches;
+export default MobileSection;

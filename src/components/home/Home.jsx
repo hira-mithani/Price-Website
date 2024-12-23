@@ -7,6 +7,8 @@ import { Box } from '@mui/material'
 import BestSellers from './best-sellers/BestSellers'
 import Header from '../header/Header'
 import SmartWatches from './smart-watches/SmartWatches'
+import MobileSection from './mobile-secion/MobileSection'
+
 
 const Home = () => {
   return (
@@ -20,9 +22,12 @@ const Home = () => {
       <Products/>
       <BestSellers/>
       <SmartWatches />
+      
     </Box>
+    {/* < MobileSection/> */}
     </>
   )
 }
 
 export default Home
+    
