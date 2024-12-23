@@ -8,6 +8,7 @@ import BestSellers from './best-sellers/BestSellers'
 import Header from '../header/Header'
 import SmartWatches from './smart-watches/SmartWatches'
 import MobileSection from './mobile-secion/MobileSection'
+import PriceSection from './price-section/PriceSection'
 
 
 const Home = () => {
@@ -22,9 +23,11 @@ const Home = () => {
       <Products/>
       <BestSellers/>
       <SmartWatches />
+      < MobileSection/>
+      <PriceSection />
       
     </Box>
-    < MobileSection/>
+   
     </>
   )
 }
