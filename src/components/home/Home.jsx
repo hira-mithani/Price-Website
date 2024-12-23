@@ -24,7 +24,7 @@ const Home = () => {
       <SmartWatches />
       
     </Box>
-    {/* < MobileSection/> */}
+    < MobileSection/>
     </>
   )
 }
