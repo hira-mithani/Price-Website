@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
-import { Typography } from "@mui/material";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
 
@@ -19,6 +18,7 @@ const AppMenu = (props) => {
             <FontAwesomeIcon className="bg-slate-300 text-lg p-1 h-4 w-4 rounded-full" onClose={toggleDrawer(false)} icon={faXmark}/>
             </Box>
           </Box>
+
 
           {/* bottom */}
           <Box></Box>

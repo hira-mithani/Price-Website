@@ -39,7 +39,7 @@ const router = createBrowserRouter([
             element: <ProtectRoute> <TrackMyOrder /></ProtectRoute>,
           },
           {
-            path: "account/profile",
+            path: "/profile",
             element: <ProtectRoute><UpdateProfile/></ProtectRoute> 
           }
     

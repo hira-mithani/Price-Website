@@ -202,7 +202,7 @@ const AccountManage = () => {
               />
              <Typography>
                 <Link to='/profile'>Edit Profile</Link>
-              </Typography>    
+              </Typography>
 
             </Box>
           </Box>

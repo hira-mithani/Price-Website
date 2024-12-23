@@ -6,7 +6,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { Controller, useForm } from "react-hook-form";
 
 
-const Profile = () => {
+const UpdateProfile = () => {
 
 const navigate = useNavigate();
     const storedUser = JSON.parse(localStorage.getItem("user")) || {
@@ -100,4 +100,4 @@ const navigate = useNavigate();
   );
 };
 
-export default Profile;
+export default UpdateProfile;
