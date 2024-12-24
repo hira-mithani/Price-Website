@@ -10,6 +10,7 @@ import SmartWatches from './smart-watches/SmartWatches'
 import MobileSection from './mobile-secion/MobileSection'
 import PriceSection from './price-section/PriceSection'
 import CustomCard from './custom-card/CustomCard'
+import Cards from './cards/Cards'
 
 
 const Home = () => {
@@ -27,6 +28,7 @@ const Home = () => {
       < MobileSection/>
       <PriceSection />
       <CustomCard />
+      <Cards />
       
     </Box>
    
