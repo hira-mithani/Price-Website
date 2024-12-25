@@ -1,233 +1,232 @@
+import { Box, Button, Typography } from "@mui/material";
 import React from "react";
-import Banner from "../../../assets/banner-2-pink.png";
-import { Box, Button, Card, Typography } from "@mui/material";
 import { Swiper, SwiperSlide } from "swiper/react";
-import Img1 from "../../../assets/vgr-stainless-steel-blade-trimmer-card-5.webp";
-import Img2 from "../../../assets/remington-pilot-personal-groomer-kit-pg180-card-5.webp";
-import Img3 from "../../../assets/kemei-3-in-1-rechargeable-electric-shaver-card-5.webp";
-import Img4 from "../../../assets/mi-5-blade-electric-shaver-pakistan-card-5.webp";
-import Img5 from "../../../assets/kemei-7-in-1-grooming-kit-shaving-card-5.webp";
-import Img6 from "../../../assets/dingling-professional-rf-608b-card-5.webp";
-import Img7 from "../../../assets/vgr-zero-t-blade-trimmer-v-card-5.webp";
-import Img8 from "../../../assets/kemei-km-6331-3-in-1-grooming-card-5.webp";
-import Img9 from "../../../assets/dinglong-professional-beard-and-card-5.webp";
-import Img10 from "../../../assets/kemei-km-6330-hair-beard-card-5.webp";
-import Img11 from "../../../assets/kemei-km-1613-hair-clippers-men-card-5.webp";
-import Img12 from "../../../assets/mi-hair-clipper-pakistan-card-5.webp";
-import saleImg from "../../../assets/12.12-sale.png";
+import "swiper/css";
+import "swiper/css/grid";
+import "swiper/css/navigation";
+import { Grid } from "swiper/modules";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faStar } from "@fortawesome/free-solid-svg-icons";
+import Image2 from "../../../assets/vgr-stainless-steel-blade-trimmer-card-5.webp";
+import Image3 from "../../../assets/remington-pilot-personal-groomer-kit-pg180-card-5.webp";
+import Image4 from "../../../assets/kemei-3-in-1-rechargeable-electric-shaver-card-5.webp";
+import Image5 from "../../../assets/mi-5-blade-electric-shaver-pakistan-card-5.webp";
+import Image6 from "../../../assets/kemei-7-in-1-grooming-kit-shaving-card-5.webp";
+import Image7 from "../../../assets/dingling-professional-rf-608b-card-5.webp";
+import Image8 from "../../../assets/vgr-zero-t-blade-trimmer-v-card-5.webp";
+import Image9 from "../../../assets/kemei-km-6331-3-in-1-grooming-card-5.webp";
+import Image10 from "../../../assets/dinglong-professional-beard-and-card-5.webp";
+import { Navigation}  from 'swiper/modules';
 
-// import required modules
-import { EffectCreative, Grid } from "swiper/modules";
-
-const AllProducts = [
-  {
-    Image: Img1,
-    SaleImg: saleImg,
-    reviews: "VGR Zero T-Blade Trimmer - V-030",
-    price: 2157,
-    oldPrice: 7399,
-    percent: "30% off",
-  },
-  {
-    Image: Img2,
-    SaleImg: saleImg,
-    reviews: "KEMEI 3 In 1 Rechargeable Electric Shaver & Trimmer KM-6332",
-    price: 1897,
-    oldPrice: 7399,
-    percent: "30% off",
-  },
-  {
-    Image: Img3,
-    SaleImg: saleImg,
-    reviews: "Kemei KM-6331 3 in 1 Grooming Kit with USB Charging",
-    price: 1698,
-    oldPrice: 20000,
-    percent: "33% off",
-  },
-  {
-    Image: Img4,
-    SaleImg: saleImg,
-    reviews: "Kemei 7 in 1 Grooming Kit Shaving Machine Set KM-580",
-    price: 2389,
-    oldPrice: 7199,
-    percent: "36% off",
-  },
-  {
-    Image: Img5,
-    SaleImg: saleImg,
-    reviews: "Kemei 7 in 1 Grooming Kit Shaving Machine Set KM-580",
-    price: 3699,
-    oldPrice: 14000,
-    percent: "36% off",
-  },
-  {
-    Image: Img6,
-    SaleImg: saleImg,
-    reviews: "Kemei KM-6330 Hair & Beard Trimmer 3 in 1",
-    price: 17999,
-    oldPrice: 6999,
-    percent: "29% off",
-  },
-  {
-    Image: Img7,
-    SaleImg: saleImg,
-    reviews: "Kemei Km-1613 Hair Clippers Men Professional Electric Trimmer",
-    price: 3789,
-    oldPrice: 6999,
-    percent: "16% off",
-  },
-  {
-    Image: Img8,
-    SaleImg: saleImg,
-    reviews: "VGR Stainless Steel Blade Trimmer - V-031",
-    price: 2499,
-    oldPrice: 6000,
-    percent: "8% off",
-  },
-  {
-    Image: Img9,
-    SaleImg: saleImg,
-    reviews: "REMINGTON Pilot Personal Groomer Kit PG180",
-    price: 5899,
-    oldPrice: 10500,
-    percent: "50% off",
-  },
-  {
-    Image: Img10,
-    SaleImg: saleImg,
-    reviews: "Mi 5-Blade Electric Shaver",
-    price: 16299,
-    oldPrice: 9999,
-    percent: "62% off",
-  },
-  {
-    Image: Img11,
-    SaleImg: saleImg,
-    reviews: "Dingling Professional Rf 608B",
-    price: 1799,
-    oldPrice: 6999,
-    percent: "44% off",
-  },
-  {
-    Image: Img12,
-    SaleImg: saleImg,
-    reviews: "Apple AirPods 4 Active Noise Cancellation",
-    price: 56999,
-    oldPrice: 95999,
-    percent: "41% off",
-  },
-];
 
 const TrimmersShaver = () => {
+  const product = [
+    {
+      id: 1,
+      image:
+        "https://images.priceoye.pk/vgr-zero-t-blade-trimmer-v-030-pakistan-priceoye-c2lke-270x270.webp",
+      title: "Redmi Buds 6 Active Wireless Earbuds",
+      currentPrice: 4549,
+      originalPrice: 7399,
+      discountPercentage: 39,
+      rating: 5.0,
+      reviews: 17,
+    },
+    {
+      id:Image2,
+      image:Image2,
+      title: "Realme T100 Wireless Earbuds",
+      currentPrice: 4999,
+      originalPrice: 7000,
+      discountPercentage: 29,
+      rating: 54.9,
+      reviews: 38,
+    },
+    {
+      id: 3,
+      image:Image3,
+      title: "Nothing Buds Pro 2",
+      currentPrice: 13499,
+      originalPrice: 20000,
+      discountPercentage: 33,
+      rating: 4.5,
+      reviews: 5,
+    },
+    {
+      id: 4,
+      image:Image4,
+      title: "Anker R50i Earbuds",
+      currentPrice: 4611,
+      originalPrice: 7199,
+      discountPercentage: 36,
+      rating: 4.7,
+      reviews: 30,
+    },
+    {
+      id: 5,
+      image:Image5,
+      title: "Soundpeats Engine4 Wireless Earbuds",
+      currentPrice: 10518,
+      originalPrice: 14000,
+      discountPercentage: 25,
+      rating: 4.6,
+      reviews: 13,
+    },
+    {
+      id: 6,
+      image:Image6,
+      title: "Samsung Galaxy Buds 3 Pro ",
+      currentPrice: 49799,
+      originalPrice: 69999,
+      discountPercentage: 29,
+      rating: 4.7,
+      reviews: 7,
+    },
+
+    {
+      id: 7,
+      image:Image7,
+      title: "QCY T13 ANC 2",
+      currentPrice: 5499,
+      originalPrice: 6000,
+      discountPercentage: 8,
+      rating: 5.0,
+      reviews: 1,
+    },
+    {
+      id: 8,
+      image:Image8,
+      title: "Realme Buds T110",
+      currentPrice: 4999,
+      originalPrice: 10500,
+      discountPercentage: 52,
+      rating: 4.8,
+      reviews: 11,
+    },
+    {
+      id: 9,
+      image:Image9,
+      title: "Audionic Airbud 550",
+      currentPrice: 3811,
+      originalPrice: 9990,
+      discountPercentage: 62,
+      rating: 4.8,
+      reviews: 537,
+    },
+    {
+      id: 10,
+      image:Image10,
+      title: "Imiki MT2 Wireless Erbuds",
+      currentPrice: 3899,
+      originalPrice: 6999,
+      discountPercentage: 44,
+      rating: 4.6,
+      reviews: 14,
+    },
+  ];
+
   return (
-    <Box className="relative">
-      <Box className="w-full mt-7 relative">
-        <img
-          src={Banner}
-          alt=""
-          srcSet=""
-          className="w-full h-[65vh] object-cover tablet-height"
-        />
-      </Box>
+    <>
+    
+     <Box className="bg-gray-200">
+     <Box className="py-5 lg:py-7 md:px-12 bg-slate-100">
+  {/* <img src={Compain} alt="" className="w-full"/> */}
+</Box>
 
-      <Box className="container mx-auto px-0 sm:px-4 md:px-6 lg:px-8 xl:px-12">
-        <Box className="container mx-auto absolute top-16 z-10">
-          <Box className="flex justify-between mx-5">
-            <Typography variant="h6" className="text-white font-bold">
-            Latest Trimmers Shaver
-            </Typography>
-            <Button
-              variant="contained"
-              className="!bg-white !text-black !font-bold"
-            >
-              View All
-            </Button>
-          </Box>
-          <Box className="py-5">
-            <Swiper
-              slidesPerView={2}
-              spaceBetween={12}
-              grid={{
-                rows: 2,
-                fill: "row",
-              }}
-              grabCursor={true}
-              breakpoints={{
-                640: {
-                  slidesPerView: 2,
-                },
-                768: {
-                  slidesPerView: 3,
-                },
-                1024: {
-                  slidesPerView: 4,
-                },
-              }}
-              modules={[Grid, EffectCreative]}
-              className="mySwiper"
-            >
-              {AllProducts?.map((item, index) => (
-                <SwiperSlide key={index}>
-                  <Card className="shadow-lg shadow-slate-300 relative w-full">
-                    <Box className="w-full pt-4">
-                      <img
-                        style={{ width: "8rem", height: "auto" }}
-                        className="mx-auto object-contain"
-                        src={item?.Image}
-                        alt="Main Image"
-                      />
-                    </Box>
-
-                    <Box className="absolute top-4 right-4">
-                      <img
-                        style={{ width: "4rem", height: "auto" }}
-                        className="object-contain"
-                        src={item?.SaleImg}
-                        alt="Sale"
-                      />
-                    </Box>
-
-                    <Box className="flex items-center bg-orange-100 px-2 rounded-lg w-1/3 ms-4 mt-0">
-                      <span className="text-yellow-500 text-lg">★</span>
-                      <Typography variant="body2" className="ml-1 font-bold">
-                        4.8 reviews
-                      </Typography>
-                    </Box>
-
-                    <Box className="p-4">
-                      <Typography
-                        variant="body2"
-                        className="text-sm font-bold truncate my-2"
-                      >
-                        {item?.reviews}
-                      </Typography>
-
-                      <Typography
-                        variant="h6"
-                        className="text-lg font-bold text-black"
-                      >
-                        RS {item.price}
-                      </Typography>
-
-                      <Box className="flex justify-between items-center space-x-2 mt-1">
-                        <span className="text-gray-500 line-through">
-                          Rs {item?.oldPrice}
-                        </span>
-                        <Box className="bg-gray-100 px-2 py-1 rounded-lg">
-                          <span className="text-green-500 text-sm">
-                            {item?.percent}
-                          </span>
-                        </Box>
-                      </Box>
-                    </Box>
-                  </Card>
-                </SwiperSlide>
-              ))}
-            </Swiper>
-          </Box>
+     <Box
+        sx={{
+          backgroundImage: `url('https://static.priceoye.pk/images/categories/section-mobiles-bg-md.png')`,
+          backgroundSize: "cover",
+          marginTop: "100px",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+        }}
+        className="w-[100%] h-[300px] lg:h-[450px] mb-52"
+      >
+        <Box className="container mx-auto pt-7 mb:pt-16 pb-7 flex justify-between items-center px-3">
+          <Typography className="text-white"variant="h5">
+          Latest Trimmers Shaver
+          </Typography>
+          <Button
+            className="!text-black !bg-white !hover:text-slate-300 !capitalize"
+            variant="contained"
+          >
+            View all
+          </Button>
         </Box>
+        <Swiper
+          breakpoints={{
+            320: {
+              slidesPerView: 2,
+            },
+            480: {
+              slidesPerView: 2,
+            },
+            768: {
+              slidesPerView: 3,
+            },
+            1024: {
+              slidesPerView: 4,
+            },
+          }}
+          grid={{
+            rows: 2,
+          }}
+          spaceBetween={15}
+          pagination={{
+            clickable: true,
+          }}
+          modules={[Grid, Navigation]}
+          className="customSwiper container mx-auto"
+        >
+          {product.map((item) => (
+            <SwiperSlide
+              key={item.id}
+              className="bg-white rounded-lg mx-3 !w-72 !px-5 cursor-pointer drop-shadow-md"
+            >
+              <Box className="flex flex-col justify-center items-center !mt-5">
+                <Box className="text-center">
+                  <img className="w-28" src={item.image} alt={item.title} />
+                  <Box className="flex items-center bg-[#FBF7EB] px-2 rounded-full relative -left-16 -top-2">
+                    <Typography className="!text-sm">
+                      {" "}
+                      <FontAwesomeIcon
+                        className="text-[#FFC61C]"
+                        icon={faStar}
+                      />{" "}
+                      {item.rating}
+                    </Typography>
+                    <Typography className="!text-[11px] ps-2">
+                      {" "}
+                      {item.reviews} Reviews
+                    </Typography>
+                  </Box>
+                </Box>
+                <Box className="flex flex-col items-start gap-3 mt-4 w-60 text-start pb-4 ">
+                  <Typography className="!text-[15px]">{item.title}</Typography>
+                  <Typography className="!font-semibold !text-xl lining-nums">
+                    <span className="text-sm font-medium relative -top-2">
+                      Rs
+                    </span>{" "}
+                    {item.currentPrice}
+                  </Typography>
+                  <Box className="flex justify-between items-center w-full pb-2">
+                    <Typography className="!text-sm lining-nums line-through decoration-red-500 text-slate-400">
+                      <span className="text-xs relative -top-2">Rs</span>{" "}
+                      {item.originalPrice}
+                    </Typography>
+                    <Typography className="!font-normal !text-xs text-[#1EB688] bg-[#F0FAF7] rounded-full px-1">
+                      {item.discountPercentage}% OFF
+                    </Typography>
+                  </Box>
+                </Box>
+              </Box>
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </Box>
-    </Box>
+     </Box>
+    </>
   );
 };
 
