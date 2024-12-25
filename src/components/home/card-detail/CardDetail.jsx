@@ -9,7 +9,7 @@ import {
   AccordionDetails,
   TextField,
 } from "@mui/material";
-import productData from "../../../components/data/Productdata.json";
+import productData from "../../../components/data/Product.json";
 import Footer from "../../footer/Footer";
 import official from "../../assets/officail.svg";
 import wararnty from "../../assets/approved-feature-1.svg";
