@@ -5,18 +5,21 @@ import Gallery from './gellary/Gallery'
 import Products from './products/Products'
 import { Box } from '@mui/material'
 import BestSellers from './best-sellers/BestSellers'
-import Header from '../header/Header'
+// import Header from '../header/Header'
 import SmartWatches from './smart-watches/SmartWatches'
 import MobileSection from './mobile-secion/MobileSection'
 import PriceSection from './price-section/PriceSection'
 import CustomCard from './custom-card/CustomCard'
 import Cards from './cards/Cards'
+import TrimmersShaver from "./trimmers-shaver/TrimmersShaver"
+import SubSection from './sub-section/SubSection'
+import Footer from '../footer/Footer'
 
 
 const Home = () => {
   return (
     <>
-      <Header/>
+      {/* <Header/> */}
     <Box className="!bg-slate-100">
     
       <Category/>
@@ -29,7 +32,9 @@ const Home = () => {
       <PriceSection />
       <CustomCard />
       <Cards />
-      
+      <TrimmersShaver />
+      <SubSection />
+      <Footer />
     </Box>
    
     </>

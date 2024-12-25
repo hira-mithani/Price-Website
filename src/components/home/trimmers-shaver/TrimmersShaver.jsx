@@ -1,0 +1,234 @@
+import React from "react";
+import Banner from "../../../assets/banner-2-pink.png";
+import { Box, Button, Card, Typography } from "@mui/material";
+import { Swiper, SwiperSlide } from "swiper/react";
+import Img1 from "../../../assets/vgr-stainless-steel-blade-trimmer-card-5.webp";
+import Img2 from "../../../assets/remington-pilot-personal-groomer-kit-pg180-card-5.webp";
+import Img3 from "../../../assets/kemei-3-in-1-rechargeable-electric-shaver-card-5.webp";
+import Img4 from "../../../assets/mi-5-blade-electric-shaver-pakistan-card-5.webp";
+import Img5 from "../../../assets/kemei-7-in-1-grooming-kit-shaving-card-5.webp";
+import Img6 from "../../../assets/dingling-professional-rf-608b-card-5.webp";
+import Img7 from "../../../assets/vgr-zero-t-blade-trimmer-v-card-5.webp";
+import Img8 from "../../../assets/kemei-km-6331-3-in-1-grooming-card-5.webp";
+import Img9 from "../../../assets/dinglong-professional-beard-and-card-5.webp";
+import Img10 from "../../../assets/kemei-km-6330-hair-beard-card-5.webp";
+import Img11 from "../../../assets/kemei-km-1613-hair-clippers-men-card-5.webp";
+import Img12 from "../../../assets/mi-hair-clipper-pakistan-card-5.webp";
+import saleImg from "../../../assets/12.12-sale.png";
+
+// import required modules
+import { EffectCreative, Grid } from "swiper/modules";
+
+const AllProducts = [
+  {
+    Image: Img1,
+    SaleImg: saleImg,
+    reviews: "VGR Zero T-Blade Trimmer - V-030",
+    price: 2157,
+    oldPrice: 7399,
+    percent: "30% off",
+  },
+  {
+    Image: Img2,
+    SaleImg: saleImg,
+    reviews: "KEMEI 3 In 1 Rechargeable Electric Shaver & Trimmer KM-6332",
+    price: 1897,
+    oldPrice: 7399,
+    percent: "30% off",
+  },
+  {
+    Image: Img3,
+    SaleImg: saleImg,
+    reviews: "Kemei KM-6331 3 in 1 Grooming Kit with USB Charging",
+    price: 1698,
+    oldPrice: 20000,
+    percent: "33% off",
+  },
+  {
+    Image: Img4,
+    SaleImg: saleImg,
+    reviews: "Kemei 7 in 1 Grooming Kit Shaving Machine Set KM-580",
+    price: 2389,
+    oldPrice: 7199,
+    percent: "36% off",
+  },
+  {
+    Image: Img5,
+    SaleImg: saleImg,
+    reviews: "Kemei 7 in 1 Grooming Kit Shaving Machine Set KM-580",
+    price: 3699,
+    oldPrice: 14000,
+    percent: "36% off",
+  },
+  {
+    Image: Img6,
+    SaleImg: saleImg,
+    reviews: "Kemei KM-6330 Hair & Beard Trimmer 3 in 1",
+    price: 17999,
+    oldPrice: 6999,
+    percent: "29% off",
+  },
+  {
+    Image: Img7,
+    SaleImg: saleImg,
+    reviews: "Kemei Km-1613 Hair Clippers Men Professional Electric Trimmer",
+    price: 3789,
+    oldPrice: 6999,
+    percent: "16% off",
+  },
+  {
+    Image: Img8,
+    SaleImg: saleImg,
+    reviews: "VGR Stainless Steel Blade Trimmer - V-031",
+    price: 2499,
+    oldPrice: 6000,
+    percent: "8% off",
+  },
+  {
+    Image: Img9,
+    SaleImg: saleImg,
+    reviews: "REMINGTON Pilot Personal Groomer Kit PG180",
+    price: 5899,
+    oldPrice: 10500,
+    percent: "50% off",
+  },
+  {
+    Image: Img10,
+    SaleImg: saleImg,
+    reviews: "Mi 5-Blade Electric Shaver",
+    price: 16299,
+    oldPrice: 9999,
+    percent: "62% off",
+  },
+  {
+    Image: Img11,
+    SaleImg: saleImg,
+    reviews: "Dingling Professional Rf 608B",
+    price: 1799,
+    oldPrice: 6999,
+    percent: "44% off",
+  },
+  {
+    Image: Img12,
+    SaleImg: saleImg,
+    reviews: "Apple AirPods 4 Active Noise Cancellation",
+    price: 56999,
+    oldPrice: 95999,
+    percent: "41% off",
+  },
+];
+
+const TrimmersShaver = () => {
+  return (
+    <Box className="relative">
+      <Box className="w-full mt-7 relative">
+        <img
+          src={Banner}
+          alt=""
+          srcSet=""
+          className="w-full h-[65vh] object-cover tablet-height"
+        />
+      </Box>
+
+      <Box className="container mx-auto px-0 sm:px-4 md:px-6 lg:px-8 xl:px-12">
+        <Box className="container mx-auto absolute top-16 z-10">
+          <Box className="flex justify-between mx-5">
+            <Typography variant="h6" className="text-white font-bold">
+            Latest Trimmers Shaver
+            </Typography>
+            <Button
+              variant="contained"
+              className="!bg-white !text-black !font-bold"
+            >
+              View All
+            </Button>
+          </Box>
+          <Box className="py-5">
+            <Swiper
+              slidesPerView={2}
+              spaceBetween={12}
+              grid={{
+                rows: 2,
+                fill: "row",
+              }}
+              grabCursor={true}
+              breakpoints={{
+                640: {
+                  slidesPerView: 2,
+                },
+                768: {
+                  slidesPerView: 3,
+                },
+                1024: {
+                  slidesPerView: 4,
+                },
+              }}
+              modules={[Grid, EffectCreative]}
+              className="mySwiper"
+            >
+              {AllProducts?.map((item, index) => (
+                <SwiperSlide key={index}>
+                  <Card className="shadow-lg shadow-slate-300 relative w-full">
+                    <Box className="w-full pt-4">
+                      <img
+                        style={{ width: "8rem", height: "auto" }}
+                        className="mx-auto object-contain"
+                        src={item?.Image}
+                        alt="Main Image"
+                      />
+                    </Box>
+
+                    <Box className="absolute top-4 right-4">
+                      <img
+                        style={{ width: "4rem", height: "auto" }}
+                        className="object-contain"
+                        src={item?.SaleImg}
+                        alt="Sale"
+                      />
+                    </Box>
+
+                    <Box className="flex items-center bg-orange-100 px-2 rounded-lg w-1/3 ms-4 mt-0">
+                      <span className="text-yellow-500 text-lg">★</span>
+                      <Typography variant="body2" className="ml-1 font-bold">
+                        4.8 reviews
+                      </Typography>
+                    </Box>
+
+                    <Box className="p-4">
+                      <Typography
+                        variant="body2"
+                        className="text-sm font-bold truncate my-2"
+                      >
+                        {item?.reviews}
+                      </Typography>
+
+                      <Typography
+                        variant="h6"
+                        className="text-lg font-bold text-black"
+                      >
+                        RS {item.price}
+                      </Typography>
+
+                      <Box className="flex justify-between items-center space-x-2 mt-1">
+                        <span className="text-gray-500 line-through">
+                          Rs {item?.oldPrice}
+                        </span>
+                        <Box className="bg-gray-100 px-2 py-1 rounded-lg">
+                          <span className="text-green-500 text-sm">
+                            {item?.percent}
+                          </span>
+                        </Box>
+                      </Box>
+                    </Box>
+                  </Card>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </Box>
+        </Box>
+      </Box>
+    </Box>
+  );
+};
+
+export default TrimmersShaver;

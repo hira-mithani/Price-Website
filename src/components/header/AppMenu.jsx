@@ -1,39 +1,3 @@
-// import React, { useState } from "react";
-// import Box from "@mui/material/Box";
-// import Drawer from "@mui/material/Drawer";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { faXmark } from "@fortawesome/free-solid-svg-icons";
-
-// const AppMenu = (props) => {
-//   const { toggleDrawer, open } = props;
-
-//   return (
-//     <>
-//       <Drawer open={open} onClose={toggleDrawer(false)}>
-//         <Box sx={{ width: 300 }} role="presentation">
-//           {/* Top */}
-//           <Box className="py-10 px-3" sx={{backgroundColor:"#48AFFF"}}>
-//             <Box className="flex justify-between items-center pe-3">
-//             <img className="w-28" src="https://static.priceoye.pk/images/logo.svg" alt="" />
-//             <FontAwesomeIcon className="bg-slate-300 text-lg p-1 h-4 w-4 rounded-full" onClose={toggleDrawer(false)} icon={faXmark}/>
-//             </Box>
-//           </Box>
-
-
-//           {/* bottom */}
-//           <Box></Box>
-//         </Box>
-//       </Drawer>
-//     </>
-//   );
-// };
-
-// export default AppMenu;
-
-
-
-
-
 import * as React from "react";
 import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
@@ -175,7 +139,7 @@ export default function OpenDrawer(props) {
     <div>
       <Drawer open={open} onClose={toggleDrawer(false)}>
         <Box sx={{ width: 400 }} role="presentation">
-          <Box className="bg-color text-black">
+          <Box className="bg-color text-white">
             <Box className="container mx-auto p-5">
               <img className="w-1/2 mx-3" src={logo} alt="Logo" />
               <Box className="flex my-3">

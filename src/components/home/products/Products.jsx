@@ -1,10 +1,6 @@
 import { Box, Tooltip, Typography, Zoom } from "@mui/material";
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/pagination";
-
-import { Pagination } from "swiper/modules";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 

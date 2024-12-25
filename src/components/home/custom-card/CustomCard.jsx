@@ -1,8 +1,7 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/pagination";
+
 
 const CustomCard = () => {
   const reviews = [
@@ -57,74 +56,79 @@ const CustomCard = () => {
           What our Customers say about Priceoye.pk
         </p>
 
-        
-        <Swiper
-          modules={[Pagination]}
-          spaceBetween={15}
-          slidesPerView={2}
-          breakpoints={{
-            640: { slidesPerView: 3, spaceBetween: 20 },
-            1024: { slidesPerView: 4, spaceBetween: 30 },
-          }}
-          pagination={{ clickable: true }}
-          className="mb-6"
-        >
-          {images.map((img, index) => (
-            <SwiperSlide key={index}>
-              <img
-                src={img}
-                alt={`Customer ${index + 1}`}
-                className="rounded-lg w-3/4 h-32 object-cover border border-gray-300 shadow-sm"
-              />
-            </SwiperSlide>
-          ))}
-        </Swiper>
+        {/* Wrapping the Swiper in a div with more padding */}
+        <div className="px-8"> {/* Increased padding here */}
+          <Swiper
+            modules={[Pagination]}
+            spaceBetween={15}
+            slidesPerView={2}
+            breakpoints={{
+              640: { slidesPerView: 3, spaceBetween: 20 },
+              1024: { slidesPerView: 4, spaceBetween: 30 },
+            }}
+            pagination={{ clickable: true }}
+            className="mb-6"
+          >
+            {images.map((img, index) => (
+              <SwiperSlide key={index}>
+                <img
+                  src={img}
+                  alt={`Customer ${index + 1}`}
+                  className="rounded-lg w-3/4 h-32 object-cover border border-gray-300 shadow-sm"
+                />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
 
-       
-        <Swiper
-          modules={[Pagination]}
-          spaceBetween={15}
-          slidesPerView={1}
-          breakpoints={{
-            640: { slidesPerView: 2, spaceBetween: 20 },
-            1024: { slidesPerView: 3, spaceBetween: 30 },
-          }}
-          pagination={{ clickable: true }}
-        >
-          {reviews.map((review, index) => (
-            <SwiperSlide key={index}>
-              <div
-                className="bg-white border border-gray-200 rounded-lg shadow-lg p-4 flex flex-col justify-between"
-                style={{ width: "400px", height: "200px" }}
-              >
-                {/* Header */}
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-full bg-blue-500 text-white flex items-center justify-center text-lg font-bold">
-                    {review.initials}
+        {/* Wrapping the Swiper in a div with more padding */}
+        <div className="px-8"> {/* Increased padding here */}
+          <Swiper
+            modules={[Pagination]}
+            spaceBetween={15}
+            slidesPerView={1}
+            breakpoints={{
+              640: { slidesPerView: 2, spaceBetween: 20 },
+              1024: { slidesPerView: 3, spaceBetween: 30 },
+            }}
+            pagination={{ clickable: true }}
+          >
+            {reviews.map((review, index) => (
+              <SwiperSlide key={index}>
+                <div
+                  className="bg-white border border-gray-200 rounded-lg shadow-lg p-4 flex flex-col justify-between"
+                  style={{ width: "400px", height: "200px" }}
+                >
+                  {/* Header */}
+                  <div className="flex items-center gap-4">
+                    <div className="w-12 h-12 rounded-full bg-blue-500 text-white flex items-center justify-center text-lg font-bold">
+                      {review.initials}
                     </div>
-  <div className="flex-1">
-    <h3 className="text-lg font-semibold">{review.name}</h3>
-    <p className="text-gray-500 text-sm">{review.date}</p>
-  </div>
-  {review.verified && (
-    <span className="text-green-500 text-sm font-medium ml-auto">
-      ✔ Verified
-    </span>
-  )}
-</div>
+                    <div className="flex-1">
+                      <h3 className="text-lg font-semibold">{review.name}</h3>
+                      <p className="text-gray-500 text-sm">{review.date}</p>
+                    </div>
+                    {review.verified && (
+                      <span className="text-green-500 text-sm font-medium ml-auto">
+                        ✔ Verified
+                      </span>
+                    )}
+                  </div>
 
+                  {/* Rating */}
+                  <div className="mb-2 text-yellow-500 mt-4">
+                    {"⭐".repeat(review.rating)}
+                  </div>
 
-                {/* Rating */}
-                <div className="mb-2 text-yellow-500 mt-4">
-                  {"⭐".repeat(review.rating)}
+                  {/* Comment */}
+                  <p className="text-gray-700 text-sm truncate">
+                    {review.comment || "No comments provided."}
+                  </p>
                 </div>
-
-                {/* Comment */}
-                <p className="text-gray-700 text-sm truncate">{review.comment || "No comments provided."}</p>
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
       </div>
     </div>
   );
