@@ -10,10 +10,10 @@ import SmartWatches from './smart-watches/SmartWatches'
 import MobileSection from './mobile-secion/MobileSection'
 import PriceSection from './price-section/PriceSection'
 import CustomCard from './custom-card/CustomCard'
-import Cards from './cards/Cards'
 import TrimmersShaver from "./trimmers-shaver/TrimmersShaver"
 import SubSection from './sub-section/SubSection'
 import Footer from '../footer/Footer'
+import ProductSection from './productsection2/ProductSection'
 
 
 const Home = () => {
@@ -27,15 +27,15 @@ const Home = () => {
       <Gallery/>
       <Products/>
       <BestSellers/>
-      <SmartWatches />
+      {/* <SmartWatches /> */}
       < MobileSection/>
       <PriceSection />
       <CustomCard />
-      <Cards />
+      <ProductSection/>
       <TrimmersShaver />
       <SubSection />
       <Footer />
-    </Box>
+    </Box> 
    
     </>
   )

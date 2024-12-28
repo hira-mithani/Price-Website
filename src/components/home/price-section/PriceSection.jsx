@@ -1,170 +1,11 @@
-// import { Box, Button, Typography } from "@mui/material";
-// import React from "react";
-// import firstImg from "../../../assets/samsung-logo.svg";
-// import SEcImg from "../../../assets/infinix.svg";
-// import thirdImg from "../../../assets/oppo.svg";
-// import fourthImg from "../../../assets/xiaomi.svg";
-// import sixImg from "../../../assets/tecno.svg";
-// import sevenImg from "../../../assets/realme.svg";
-// import eightImg from "../../../assets/itel.svg";
-// import nineImg from "../../../assets/apple.svg";
-// import tenImg from "../../../assets/nokia.svg";
-
-// const PriceSection = () => {
-//   return (
-//     <Box className="container mx-auto  mt-32 md:mt-32 lg:mt-56">
-//       <Box className="flex justify-between mx-5 my-5">
-//         <Typography variant="h6" className="font-bold">
-//           Shop by Price
-//         </Typography>
-//         <Button
-//           variant="outlined"
-//           className="!bg-white !text-black !font-bold border"
-//         >
-//           View All
-//         </Button>
-//       </Box>
-//       <Box className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-4">
-//         <Box>
-//           <Button
-//             variant="contained"
-//             className="w-full h-full !bg-yellow-300 !text-black relative overflow-hidden group"
-//           >
-//             <span className="absolute inset-0 bg-blue-400 scale-y-0 group-hover:scale-y-100 transform origin-bottom transition-transform duration-300 ease-in-out"></span>
-//             <span className="relative z-10"> Below RS 15000</span>
-//           </Button>
-//         </Box>
-//         <Box>
-//           <Button
-//             variant="contained"
-//             className="w-full h-full !bg-yellow-300 !text-black relative overflow-hidden group"
-//           >
-//             <span className="absolute inset-0 bg-blue-400 scale-y-0 group-hover:scale-y-100 transform origin-bottom transition-transform duration-300 ease-in-out"></span>
-//             <span className="relative z-10"> Rs, 15000- Rs 25000</span>
-//           </Button>
-//         </Box>
-//         <Box>
-//           <Button
-//             variant="contained"
-//             className="w-full h-full !bg-yellow-300 !text-black relative overflow-hidden group"
-//           >
-//             <span className="absolute inset-0 bg-blue-400 scale-y-0 group-hover:scale-y-100 transform origin-bottom transition-transform duration-300 ease-in-out"></span>
-//             <span className="relative z-10"> Rs 25000- Rs 40000</span>
-//           </Button>
-//         </Box>
-//         <Box>
-//           <Button
-//             variant="contained"
-//             className="w-full h-full !bg-yellow-300 !text-black relative overflow-hidden group"
-//           >
-//             <span className="absolute inset-0 bg-blue-400 scale-y-0 group-hover:scale-y-100 transform origin-bottom transition-transform duration-300 ease-in-out"></span>
-//             <span className="relative z-10"> Rs 40000- Rs 60000</span>
-//           </Button>
-//         </Box>
-//         <Box>
-//           <Button
-//             variant="contained"
-//             className="w-full h-full !bg-yellow-300 !text-black relative overflow-hidden group"
-//           >
-//             <span className="absolute inset-0 bg-blue-400 scale-y-0 group-hover:scale-y-100 transform origin-bottom transition-transform duration-300 ease-in-out"></span>
-//             <span className="relative z-10"> Rs 60000- Rs 80000</span>
-//           </Button>
-//         </Box>
-//         <Box>
-//           <Button
-//             variant="contained"
-//             className="w-full h-full !bg-yellow-300 !text-black relative overflow-hidden group"
-//           >
-//             <span className="absolute inset-0 bg-blue-400 scale-y-0 group-hover:scale-y-100 transform origin-bottom transition-transform duration-300 ease-in-out"></span>
-//             <span className="relative z-10"> Rs 80000- Rs 100000</span>
-//           </Button>
-//         </Box>
-//         <Box>
-//           <Button
-//             variant="contained"
-//             className="w-full h-full !bg-yellow-300 !text-black relative overflow-hidden group"
-//           >
-//             <span className="absolute inset-0 bg-blue-400 scale-y-0 group-hover:scale-y-100 transform origin-bottom transition-transform duration-300 ease-in-out"></span>
-//             <span className="relative z-10"> 100000- 1500000</span>
-//           </Button>
-//         </Box>
-//         <Box>
-//           <Button
-//             variant="contained"
-//             className="w-full h-full !bg-yellow-300 !text-black relative overflow-hidden group"
-//           >
-//             <span className="absolute inset-0 bg-blue-400 scale-y-0 group-hover:scale-y-100 transform origin-bottom transition-transform duration-300 ease-in-out"></span>
-//             <span className="relative z-10">Above Rs 1500000</span>
-//           </Button>
-//         </Box>
-//       </Box>
-//       <Box className="flex justify-between mx-5 my-12">
-//         <Typography variant="h6" className="font-bold ">
-//           Shop by Brand
-//         </Typography>
-//         <Button
-//           variant="outlined"
-//           className="!bg-white !text-black !font-bold border"
-//         >
-//           View All
-//         </Button>
-//       </Box>
-//       <Box className="flex justify-between flex-wrap gap-2">
-//   {[
-//     firstImg,
-//     SEcImg,
-//     thirdImg,
-//     fourthImg,
-    
-//     sixImg,
-//     sevenImg,
-//     eightImg,
-//     nineImg,
-//     tenImg,
-//   ]
-//     // Determine how many images to show based on screen size
-//     .slice(
-//       0,
-//       window.innerWidth >= 1024 // Desktop and larger
-//         ? 10
-//         : window.innerWidth >= 768 // Laptop
-//         ? 9
-//         : window.innerWidth >= 640 // Tablet
-//         ? 6
-//         : 4 // Mobile
-//     )
-//     .map((imgSrc, index) => (
-//       <Box
-//         key={index}
-//         className="w-20 h-20 flex justify-between items-center"
-//       >
-//         <img src={imgSrc} alt="" className="w-full h-full object-cover" />
-//       </Box>
-//     ))}
-// </Box>
-
-//     </Box>
-//   );
-// };
-
-// export default PriceSection;
-
-
 import { Box, Button, Typography } from "@mui/material";
 import React from "react";
-import firstImg from "../../../assets/samsung-logo.svg";
-import SEcImg from "../../../assets/infinix.svg";
-import thirdImg from "../../../assets/oppo.svg";
-import fourthImg from "../../../assets/xiaomi.svg";
-import sixImg from "../../../assets/tecno.svg";
-import sevenImg from "../../../assets/realme.svg";
-import eightImg from "../../../assets/itel.svg";
-import nineImg from "../../../assets/apple.svg";
-import tenImg from "../../../assets/nokia.svg";
 
 const PriceSection = () => {
   return (
-    <Box className="container mx-auto mt-32 md:mt-32 lg:mt-56 px-6 lg:px-16">
+    <Box
+      className="container mx-auto px-6 lg:px-16 pt-32" // Increased padding-top for even more space from top
+    >
       {/* Top spacing */}
       <Box className="flex justify-between mx-5 my-5">
         <Typography variant="h6" className="font-bold">
@@ -177,8 +18,9 @@ const PriceSection = () => {
           View All
         </Button>
       </Box>
+
+      {/* Price Range Buttons */}
       <Box className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-4">
-        {/* Buttons */}
         {[
           "Below RS 15000",
           "Rs, 15000- Rs 25000",
@@ -200,54 +42,11 @@ const PriceSection = () => {
           </Box>
         ))}
       </Box>
-      <Box className="flex justify-between mx-5 my-12">
-        <Typography variant="h6" className="font-bold">
-          Shop by Brand
-        </Typography>
-        <Button
-          variant="outlined"
-          className="!bg-white !text-black !font-bold border"
-        >
-          View All
-        </Button>
-      </Box>
-      <Box className="flex justify-between flex-wrap gap-2">
-        {[
-          firstImg,
-          SEcImg,
-          thirdImg,
-          fourthImg,
-          sixImg,
-          sevenImg,
-          eightImg,
-          nineImg,
-          tenImg,
-        ]
-          .slice(
-            0,
-            window.innerWidth >= 1024
-              ? 10
-              : window.innerWidth >= 768
-              ? 9
-              : window.innerWidth >= 640
-              ? 6
-              : 4
-          )
-          .map((imgSrc, index) => (
-            <Box
-              key={index}
-              className="w-20 h-20 flex justify-center items-center"
-              style={{ margin: "10px" }} // Added margin
-            >
-              <img src={imgSrc} alt={`Brand ${index}`} className="w-full h-full object-cover" />
-            </Box>
-          ))}
-      </Box>
-      {/* Bottom spacing */}
-      <Box className="my-16"></Box>
+
+      {/* Bottom Spacing */}
+      <Box className="my-16"></Box> {/* Bottom margin */}
     </Box>
   );
 };
 
 export default PriceSection;
-

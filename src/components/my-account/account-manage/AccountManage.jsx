@@ -1,9 +1,3 @@
-import {
-  faCommentDots,
-  faCreditCard,
-} from "@fortawesome/free-regular-svg-icons";
-import { faTruck } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Box, Typography } from "@mui/material";
 import React from "react";
 import { Link } from "react-router-dom";
@@ -11,14 +5,12 @@ import { Link } from "react-router-dom";
 const AccountManage = () => {
   return (
     <>
-      {/* Top boxes */}
       <Box className="md:flex md:items-center">
         <Box className=" bg-white md:w-1/2 m-5 p-7">
           <Typography sx={{ fontSize: "18px", paddingBottom: "25px" }}>
             My orders
           </Typography>
           <Box className="flex items-center justify-between flex-wrap gap-10 md:gap-14 lg:gap-5">
-            {/* 1 */}
             <Box className="flex flex-col justify-center items-center gap-2 cursor-pointer">
               <img
                 className="w-10"
@@ -27,8 +19,6 @@ const AccountManage = () => {
               />
               <Typography>Pay</Typography>
             </Box>
-
-            {/* 2 */}
             <Box className="flex flex-col justify-center items-center gap-2 cursor-pointer">
               <img
                 className="w-10"
@@ -37,8 +27,6 @@ const AccountManage = () => {
               />
               <Typography>Receive</Typography>
             </Box>
-
-            {/* 3 */}
             <Box className="flex flex-col justify-center items-center gap-2 cursor-pointer">
               <img
                 className="w-10"
@@ -47,8 +35,6 @@ const AccountManage = () => {
               />
               <Typography>Review</Typography>
             </Box>
-
-            {/* 4 */}
             <Box className="flex flex-col justify-center items-center gap-2 cursor-pointer">
               <img
                 className="w-10"
@@ -57,8 +43,6 @@ const AccountManage = () => {
               />
               <Typography>Refund</Typography>
             </Box>
-
-            {/* 5 */}
             <Box className="flex flex-col justify-center items-center gap-2 cursor-pointer">
               <img
                 className="w-10"
@@ -67,8 +51,6 @@ const AccountManage = () => {
               />
               <Typography>Complaints</Typography>
             </Box>
-
-            {/* 6 */}
             <Box className="flex flex-col justify-center items-center gap-2 cursor-pointer">
               <img
                 className="w-10"
@@ -85,7 +67,6 @@ const AccountManage = () => {
             Help
           </Typography>
           <Box className="flex items-center lg:justify-between justify-start flex-wrap gap-10 md:gap-14 lg:gap-5">
-            {/* 1 */}
             <Box className="flex flex-col justify-center items-center gap-2 cursor-pointer">
               <img
                 className="w-10"
@@ -94,8 +75,6 @@ const AccountManage = () => {
               />
               <Typography>FAQs</Typography>
             </Box>
-
-            {/* 2 */}
             <Box className="flex flex-col justify-center items-center gap-2 cursor-pointer">
               <img
                 className="w-10"
@@ -104,8 +83,6 @@ const AccountManage = () => {
               />
               <Typography>Open Parcel</Typography>
             </Box>
-
-            {/* 3 */}
             <Box className="flex flex-col justify-center items-center gap-2 cursor-pointer">
               <img
                 className="w-10"
@@ -114,8 +91,6 @@ const AccountManage = () => {
               />
               <Typography>Contact</Typography>
             </Box>
-
-            {/* 4 */}
             <Box className="flex flex-col justify-center items-center gap-2 cursor-pointer">
               <img
                 className="w-10"
@@ -124,8 +99,6 @@ const AccountManage = () => {
               />
               <Typography>Locations</Typography>
             </Box>
-
-            {/* 5 */}
             <Box className="flex flex-col justify-center items-center gap-2 cursor-pointer">
               <img
                 className="w-10"
@@ -144,7 +117,6 @@ const AccountManage = () => {
             Services
           </Typography>
           <Box className="flex items-center justify-between flex-wrap gap-10 md:gap-14 lg:gap-5">
-            {/* 1 */}
             <Box className="flex flex-col justify-center items-center gap-2 cursor-pointer">
               <img
                 className="w-10"
@@ -153,8 +125,6 @@ const AccountManage = () => {
               />
               <Typography>Support</Typography>
             </Box>
-
-            {/* 2 */}
             <Box className="flex flex-col justify-center items-center gap-2 cursor-pointer">
               <img
                 className="w-10"
@@ -163,8 +133,6 @@ const AccountManage = () => {
               />
               <Typography>Warranty</Typography>
             </Box>
-
-            {/* 3 */}
             <Box className="flex flex-col justify-center items-center gap-2 cursor-pointer">
               <img
                 className="w-10"
@@ -183,7 +151,6 @@ const AccountManage = () => {
             Profile
           </Typography>
           <Box className="flex items-center justify-between flex-wrap gap-10 md:gap-14 lg:gap-5 md:w-[52%]">
-            {/* 1 */}
             <Box className="flex flex-col justify-center items-center gap-2 cursor-pointer">
               <img
                 className="w-10"
@@ -192,15 +159,13 @@ const AccountManage = () => {
               />
               <Typography>Address Book</Typography>
             </Box>
-
-            {/* 2 */}
             <Box className="flex flex-col justify-center items-center gap-2 cursor-pointer">
               <img
                 className="w-10"
                 src="https://static.priceoye.pk/images/my-account/complaints.svg"
                 alt=""
               />
-             <Typography>
+              <Typography>
                 <Link to='/profile'>Edit Profile</Link>
               </Typography>
 

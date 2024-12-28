@@ -3,17 +3,8 @@ import { Box, Typography, List, ListItem, ListItemText, Container } from "@mui/m
 
 function TrackMyOrder() {
   return (
-    <Box sx={{ display: "flex", flexDirection: "column", height: "100vh", backgroundColor: "#f7f8fa" }}>
-      {/* Header */}
-      <Box sx={{ backgroundColor: "#2196F3", padding: "1rem", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-        <Typography variant="h6" sx={{ color: "white", fontWeight: "bold" }}>Priceoye</Typography>
-        <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
-          <input type="text" placeholder="Search..." style={{ padding: "0.5rem", borderRadius: "4px", border: "1px solid #ccc" }} />
-          <Typography sx={{ color: "white" }}>Hira</Typography>
-        </Box>
-      </Box>
-
-      {/* Sidebar and Content */}
+    <Box sx={{ display: "flex", flexDirection: "column", height: "100vh", backgroundColor: "#f7f8fa" }}>      
+{/* Sidebar and Content */}
       <Box sx={{ display: "flex", flex: 1 }}>
         {/* Sidebar */}
         <Box sx={{ width: "20%", backgroundColor: "#fff", padding: "1rem", boxShadow: "0 2px 4px rgba(0,0,0,0.1)" }}>

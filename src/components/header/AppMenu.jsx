@@ -138,7 +138,7 @@ export default function OpenDrawer(props) {
   return (
     <div>
       <Drawer open={open} onClose={toggleDrawer(false)}>
-        <Box sx={{ width: 400 }} role="presentation">
+        <Box sx={{ width: 400, padding: "0 20px" }} role="presentation">
           <Box className="bg-color text-white">
             <Box className="container mx-auto p-5">
               <img className="w-1/2 mx-3" src={logo} alt="Logo" />
@@ -212,23 +212,23 @@ export default function OpenDrawer(props) {
             <Typography variant="h6" className="text-gray-500 mb-4">
               Popular Lists
             </Typography>
-            {[
-              "Best Mobiles Under 10000",
-              "Best Mobiles Under 15000",
-              "Best Mobiles Under 20000",
-              "Best Mobiles Under 30000",
-              "Best Mobiles Under 40000",
-              "Best Mobiles Under 50000",
-              "Best Mobiles Under 60000",
-              "Best Mobiles Under 80000",
-              "Best Mobiles Under 100000",
-              "Best 5G Phones",
-              "Best Camera Phones",
-              "Best Selfie Camera Phones",
-              "Best PUBG Mobiles",
-              "Most Expensive Phones",
-              "Top 10 Fast Charging Mobiles",
-              "Best Mobiles of 2023",
+            {[ 
+              "Best Mobiles Under 10000", 
+              "Best Mobiles Under 15000", 
+              "Best Mobiles Under 20000", 
+              "Best Mobiles Under 30000", 
+              "Best Mobiles Under 40000", 
+              "Best Mobiles Under 50000", 
+              "Best Mobiles Under 60000", 
+              "Best Mobiles Under 80000", 
+              "Best Mobiles Under 100000", 
+              "Best 5G Phones", 
+              "Best Camera Phones", 
+              "Best Selfie Camera Phones", 
+              "Best PUBG Mobiles", 
+              "Most Expensive Phones", 
+              "Top 10 Fast Charging Mobiles", 
+              "Best Mobiles of 2023"
             ].map((text, index) => (
               <Box key={index} className="my-2">
                 <button
@@ -264,4 +264,3 @@ export default function OpenDrawer(props) {
     </div>
   );
 }
-
