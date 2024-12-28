@@ -3,13 +3,13 @@ import React from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
-import productsData from "./ProductData";
-import { useProductContext } from "../../context/ProductContext";
+import productsData from "./ProductData"; // Ensure this file contains the product data for SmartWatches
+import { useProductContext } from "../../context/ProductContext"; // Import the context
 
 const ProductDetail = () => {
   const { id } = useParams();
   const navigate = useNavigate();
-  const { setSelectedProduct } = useProductContext();
+  const { setSelectedProduct } = useProductContext(); // Use the context
 
   const product = productsData.find((item) => item.id.toString() === id);
   
@@ -18,7 +18,7 @@ const ProductDetail = () => {
   }
   
   const handleAddToCart = () => {
-    setSelectedProduct(product);
+    setSelectedProduct(product); // Set the selected product in the context
     navigate("/checkout");
   };
 
