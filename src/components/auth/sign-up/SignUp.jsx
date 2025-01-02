@@ -32,7 +32,11 @@ const SignUp = () => {
 
     if (storedUser && storedUser.email === data.email && storedUser.password === data.password) {
       setIsLoggedIn(true); 
-      navigate("/"); 
+      navigate("/");
+      setTimeout(() => {
+        window.location.reload()
+        
+      }, 500); 
       alert("Successfully logged in!");
     } else {
       alert("Invalid email or password");

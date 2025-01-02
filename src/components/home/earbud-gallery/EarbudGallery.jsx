@@ -5,33 +5,33 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/grid";
 import "swiper/css/navigation";
+import "./swiper.css";
 import { Grid } from "swiper/modules";
 import { Navigation } from "swiper/modules";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
-import watchData from "./ProductData";
+import earbudData from "../../../data/earbudData";
 
-const SmartWatches = () => {
+const EarbudGallery = () => {
   const navigate = useNavigate();
 
   const handleProductClick = (id) => {
-    navigate(`/watch/${id}`);
+    navigate(`/earbud/${id}`);
   };
 
   return (
     <>
       <Box
         sx={{
-          backgroundImage: `url('https://static.priceoye.pk/images/categories/section-smart-watches-bg.png')`,
+          backgroundImage: `url('https://static.priceoye.pk/images/categories/section-earbuds-bg-md.png')`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
-          marginTop: "50px",  
         }}
         className="w-[100%] h-[300px] lg:h-[450px] mb-52"
       >
         <Box className="container mx-auto pt-7 mb:pt-16 pb-7 flex justify-between items-center px-3">
-          <Typography className="text-white">Latest Smart Watches</Typography>
+          <Typography className="text-white">Latest Wireless Earbuds</Typography>
           <Button className="!text-black !bg-white !hover:text-slate-300 !capitalize" variant="contained">
             View all
           </Button>
@@ -49,7 +49,7 @@ const SmartWatches = () => {
           modules={[Grid, Navigation]}
           className="customSwiper container mx-auto"
         >
-          {watchData.map((item) => (
+          {earbudData.map((item) => (
             <SwiperSlide
               key={item.id}
               className="bg-white rounded-lg mx-3 !w-72 !px-5 cursor-pointer drop-shadow-md"
@@ -57,7 +57,7 @@ const SmartWatches = () => {
             >
               <Box className="flex flex-col justify-center items-center !mt-5">
                 <Box className="text-center">
-                  <img className="w-28" src={item.image} alt={item.title} />
+                  <img className="max-w-20" src={item.image} alt={item.title} />
                   <Box className="flex items-center bg-[#FBF7EB] px-2 rounded-full relative -left-16 -top-2">
                     <Typography className="!text-sm">
                       <FontAwesomeIcon className="text-[#FFC61C]" icon={faStar} /> {item.rating}
@@ -88,4 +88,4 @@ const SmartWatches = () => {
   );
 };
 
-export default SmartWatches;
+export default EarbudGallery;

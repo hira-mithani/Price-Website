@@ -132,13 +132,13 @@ export default function OpenDrawer(props) {
   };
 
   const stopPropagation = (event) => {
-    event.stopPropagation(); 
+    event.stopPropagation();
   };
 
   return (
     <div>
       <Drawer open={open} onClose={toggleDrawer(false)}>
-        <Box sx={{ width: 400, padding: "0 20px" }} role="presentation">
+        <Box sx={{ width: 400, padding: "0 0px" }} role="presentation">
           <Box className="bg-color text-white">
             <Box className="container mx-auto p-5">
               <img className="w-1/2 mx-3" src={logo} alt="Logo" />
@@ -146,32 +146,32 @@ export default function OpenDrawer(props) {
                 <AccountCircleIcon className="mx-3" />
                 <Typography variant="body1">My Account</Typography>
               </Box>
-              <Box className="flex my-3 ">
+              <Box className="flex my-3">
                 <RoomIcon className="mx-3" />
                 <Typography variant="body1"> Track my Order</Typography>
               </Box>
-              <Box className="flex my-3 ">
+              <Box className="flex my-3">
                 <GradingIcon className="mx-3" />
                 <Typography variant="body1">Launch a Complaint</Typography>
               </Box>
-              <Box className="flex my-3 ">
+              <Box className="flex my-3">
                 <NotificationsNoneIcon className="mx-3" />
                 <Typography variant="body1">Notifications</Typography>
               </Box>
-              <Box className="flex my-3 ">
+              <Box className="flex my-3">
                 <ExitToAppIcon className="mx-3" />
                 <Typography variant="body1">Logout</Typography>
               </Box>
             </Box>
           </Box>
+
           <Box className="ps-5 pt-3">
             <Typography variant="h6" className="text-gray-500">
               Categories
             </Typography>
           </Box>
 
-          {/* Accordion Section */}
-          <Box className="container my-5" onClick={stopPropagation}>
+          <Box className="container my-0" onClick={stopPropagation}>
             {accordionData.map((item, index) => (
               <Accordion
                 key={index}
@@ -196,7 +196,7 @@ export default function OpenDrawer(props) {
                       {item.answer.map((answerItem, idx) => (
                         <li
                           key={idx}
-                          className="p-2  bg-white rounded-lg hover:bg-gray-200 transition duration-200"
+                          className="p-2 bg-white rounded-lg hover:bg-gray-200 transition duration-200"
                         >
                           {answerItem}
                         </li>
@@ -208,7 +208,7 @@ export default function OpenDrawer(props) {
             ))}
           </Box>
 
-          <Box className="container mx-auto">
+          <Box className="container mx-auto" style={{ paddingLeft: '20px' }}>
             <Typography variant="h6" className="text-gray-500 mb-4">
               Popular Lists
             </Typography>
@@ -241,7 +241,7 @@ export default function OpenDrawer(props) {
             ))}
           </Box>
 
-          <Box className="container mx-auto mt-10">
+          <Box className="container mx-auto mt-10" style={{ paddingLeft: '20px' }}>
             <Typography variant="h6" className="text-gray-500">
               MAIN NAVIGATION
             </Typography>

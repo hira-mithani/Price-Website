@@ -3,13 +3,18 @@ import React from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
-import productsData from "./ProductData";
+import { useSelector, useDispatch } from "react-redux";
+import { selectSelectedEarbud, setSelectedEarbud } from "../../../features/productSlice";
 
-const ProductDetail = () => {
+const EarbudDetail = () => {
   const { id } = useParams();
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const product = useSelector(selectSelectedEarbud);
 
-  const product = productsData.find((item) => item.id.toString() === id);
+  React.useEffect(() => {
+    dispatch(setSelectedEarbud(parseInt(id)));
+  }, [dispatch, id]);
 
   if (!product) {
     return <Typography>Product not found.</Typography>;
@@ -33,7 +38,7 @@ const ProductDetail = () => {
               <img
                 src={product.image}
                 alt={product.title}
-                className="w-[50%] h-auto object-contain hover:scale-105"
+                className="w-[60%] h-auto object-contain hover:scale-105"
                 style={{
                   transition: "transform 0.3s ease",
                 }}
@@ -77,4 +82,4 @@ const ProductDetail = () => {
   );
 };
 
-export default ProductDetail;
+export default EarbudDetail;

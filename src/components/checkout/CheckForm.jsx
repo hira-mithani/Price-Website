@@ -8,7 +8,7 @@ import {
   Stepper,
   StepLabel,
 } from "@mui/material";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import { useCheckoutContext } from "../context/CheckContext";
 
@@ -18,6 +18,8 @@ const CheckForm = () => {
   const [activeStep, setActiveStep] = useState(0);
   const { setCheckoutData } = useCheckoutContext();
   const navigate = useNavigate();
+  const location = useLocation();
+  const product = location.state?.product;
 
   const [formData, setFormData] = useState({
     mobileNumber: "",
@@ -38,7 +40,7 @@ const CheckForm = () => {
     if (activeStep < steps.length - 1) {
       setActiveStep((prev) => prev + 1);
     } else {
-      setCheckoutData(formData);
+      setCheckoutData({ ...formData, product });
       navigate("/order-complete");
     }
   };

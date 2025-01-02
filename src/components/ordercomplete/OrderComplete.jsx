@@ -1,20 +1,13 @@
 import React from "react";
 import { Box, Button, Typography, Paper, Grid, Divider } from "@mui/material";
 import PrintIcon from "@mui/icons-material/Print";
-import { useProductContext } from "../context/ProductContext";
 import { useCheckoutContext } from "../context/CheckContext";
 
 const OrderComplete = () => {
-  const { selectedProduct } = useProductContext();
   const { checkoutData } = useCheckoutContext();
+  const { product } = checkoutData;
 
-  React.useEffect(() => {
-    if (!selectedProduct) {
-      // Redirect to product page or show an error message
-    }
-  }, [selectedProduct]);
-
-  if (!selectedProduct) {
+  if (!product) {
     return <Typography>No product added to cart.</Typography>;
   }
 
@@ -28,7 +21,7 @@ const OrderComplete = () => {
             </Typography>
             <Box className="bg-blue-600 text-white p-4 rounded-lg inline-block">
               <Typography variant="h6">
-                Order Number 1553473, {selectedProduct.title}
+                Order Number 1553473, {product.title}
               </Typography>
             </Box>
           </Box>
@@ -103,15 +96,15 @@ const OrderComplete = () => {
                 <Box className="space-y-4">
                   <Box className="flex gap-4">
                     <img
-                      src={selectedProduct.image}
-                      alt={selectedProduct.title}
+                      src={product.image}
+                      alt={product.title}
                       className="w-20 h-20 rounded-lg"
                     />
                     <Box>
-                      <Typography variant="subtitle1">{selectedProduct.title}</Typography>
-                      <Typography color="textSecondary">Color: {selectedProduct.color}</Typography>
+                      <Typography variant="subtitle1">{product.title}</Typography>
+                      <Typography color="textSecondary">Color: {product.color}</Typography>
                       <Typography color="textSecondary">
-                        {selectedProduct.storage} - {selectedProduct.ram} RAM
+                        {product.storage} - {product.ram} RAM
                       </Typography>
                     </Box>
                   </Box>
@@ -119,11 +112,11 @@ const OrderComplete = () => {
                   <Box className="space-y-2 border-t pt-4">
                     <Box className="flex justify-between">
                       <Typography>Market Price</Typography>
-                      <Typography className="line-through">Rs {selectedProduct.originalPrice}</Typography>
+                      <Typography className="line-through">Rs {product.originalPrice}</Typography>
                     </Box>
                     <Box className="flex justify-between">
                       <Typography>Sale Price</Typography>
-                      <Typography>Rs {selectedProduct.currentPrice}</Typography>
+                      <Typography>Rs {product.currentPrice}</Typography>
                     </Box>
                     <Box className="flex justify-between text-green-600">
                       <Typography>Delivery Charges</Typography>
@@ -131,11 +124,11 @@ const OrderComplete = () => {
                     </Box>
                     <Box className="flex justify-between text-green-600">
                       <Typography>You're saving</Typography>
-                      <Typography>Rs {selectedProduct.originalPrice - selectedProduct.currentPrice} on this order</Typography>
+                      <Typography>Rs {product.originalPrice - product.currentPrice} on this order</Typography>
                     </Box>
                     <Box className="flex justify-between font-medium pt-2 border-t">
                       <Typography>Total Price</Typography>
-                      <Typography>Rs {selectedProduct.currentPrice}</Typography>
+                      <Typography>Rs {product.currentPrice}</Typography>
                     </Box>
                   </Box>
                 </Box>

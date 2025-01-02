@@ -55,9 +55,7 @@ const CustomCard = () => {
         <p className="text-gray-600 mb-6">
           What our Customers say about Priceoye.pk
         </p>
-
-        {/* Wrapping the Swiper in a div with more padding */}
-        <div className="px-8"> {/* Increased padding here */}
+        <div className="px-8">
           <Swiper
             modules={[Pagination]}
             spaceBetween={15}
@@ -80,9 +78,7 @@ const CustomCard = () => {
             ))}
           </Swiper>
         </div>
-
-        {/* Wrapping the Swiper in a div with more padding */}
-        <div className="px-8"> {/* Increased padding here */}
+        <div className="px-8">
           <Swiper
             modules={[Pagination]}
             spaceBetween={15}
@@ -99,7 +95,6 @@ const CustomCard = () => {
                   className="bg-white border border-gray-200 rounded-lg shadow-lg p-4 flex flex-col justify-between"
                   style={{ width: "400px", height: "200px" }}
                 >
-                  {/* Header */}
                   <div className="flex items-center gap-4">
                     <div className="w-12 h-12 rounded-full bg-blue-500 text-white flex items-center justify-center text-lg font-bold">
                       {review.initials}
@@ -114,13 +109,9 @@ const CustomCard = () => {
                       </span>
                     )}
                   </div>
-
-                  {/* Rating */}
                   <div className="mb-2 text-yellow-500 mt-4">
                     {"⭐".repeat(review.rating)}
                   </div>
-
-                  {/* Comment */}
                   <p className="text-gray-700 text-sm truncate">
                     {review.comment || "No comments provided."}
                   </p>

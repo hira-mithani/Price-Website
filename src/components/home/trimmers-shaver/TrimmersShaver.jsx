@@ -16,6 +16,7 @@ import Image7 from "../../../assets/dingling-professional-rf-608b-card-5.webp";
 import Image8 from "../../../assets/vgr-zero-t-blade-trimmer-v-card-5.webp";
 import Image9 from "../../../assets/kemei-km-6331-3-in-1-grooming-card-5.webp";
 import Image10 from "../../../assets/dinglong-professional-beard-and-card-5.webp";
+import BackgroundImage from "../../../assets/banner-2-pink.png";
 import { Navigation } from "swiper/modules";
 
 const TrimmersShaver = () => {
@@ -126,20 +127,16 @@ const TrimmersShaver = () => {
   return (
     <>
       <Box className="bg-gray-100">
-        <Box className="py-5 lg:py-7 md:px-12 bg-slate-100">
-          {/* <img src={Compain} alt="" className="w-full"/> */}
-        </Box>
-
-        {/* Section with background image */}
+        <Box className="py-5 lg:py-7 md:px-12 bg-slate-100"></Box>
         <Box
           sx={{
-            backgroundImage: `url('https://static.priceoye.pk/images/categories/section-mobiles-bg-md.png')`,
+            backgroundImage: `url(${BackgroundImage})`, 
             backgroundSize: "cover",
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
-            height: "450px", // Reduced height for the section
+            height: "450px",
           }}
-          className="w-full mb-32"  // Ensure enough margin at the bottom
+          className="w-full mb-32"
         >
           <Box className="container mx-auto pt-7 pb-7 flex justify-between items-center px-3">
             <Typography className="text-white" variant="h5">
@@ -152,8 +149,6 @@ const TrimmersShaver = () => {
               View all
             </Button>
           </Box>
-
-          {/* Swiper Component for Products */}
           <Swiper
             breakpoints={{
               320: {
@@ -189,30 +184,28 @@ const TrimmersShaver = () => {
                     <img className="w-28" src={item.image} alt={item.title} />
                     <Box className="flex items-center bg-[#FBF7EB] px-2 rounded-full relative -left-16 -top-2">
                       <Typography className="!text-sm">
-                        {" "}
                         <FontAwesomeIcon
                           className="text-[#FFC61C]"
                           icon={faStar}
-                        />{" "}
+                        />
                         {item.rating}
                       </Typography>
                       <Typography className="!text-[11px] ps-2">
-                        {" "}
                         {item.reviews} Reviews
                       </Typography>
                     </Box>
                   </Box>
-                  <Box className="flex flex-col items-start gap-3 mt-4 w-60 text-start pb-4 ">
+                  <Box className="flex flex-col items-start gap-3 mt-4 w-60 text-start pb-4">
                     <Typography className="!text-[15px]">{item.title}</Typography>
                     <Typography className="!font-semibold !text-xl lining-nums">
                       <span className="text-sm font-medium relative -top-2">
                         Rs
-                      </span>{" "}
+                      </span>
                       {item.currentPrice}
                     </Typography>
                     <Box className="flex justify-between items-center w-full pb-2">
                       <Typography className="!text-sm lining-nums line-through decoration-red-500 text-slate-400">
-                        <span className="text-xs relative -top-2">Rs</span>{" "}
+                        <span className="text-xs relative -top-2">Rs</span>
                         {item.originalPrice}
                       </Typography>
                       <Typography className="!font-normal !text-xs text-[#1EB688] bg-[#F0FAF7] rounded-full px-1">

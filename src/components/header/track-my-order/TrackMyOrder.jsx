@@ -4,9 +4,7 @@ import { Box, Typography, List, ListItem, ListItemText, Container } from "@mui/m
 function TrackMyOrder() {
   return (
     <Box sx={{ display: "flex", flexDirection: "column", height: "100vh", backgroundColor: "#f7f8fa" }}>      
-{/* Sidebar and Content */}
       <Box sx={{ display: "flex", flex: 1 }}>
-        {/* Sidebar */}
         <Box sx={{ width: "20%", backgroundColor: "#fff", padding: "1rem", boxShadow: "0 2px 4px rgba(0,0,0,0.1)" }}>
           <List>
             <ListItem button>
@@ -26,8 +24,6 @@ function TrackMyOrder() {
             </ListItem>
           </List>
         </Box>
-
-        {/* Content */}
         <Container sx={{ flex: 1, display: "flex", justifyContent: "center", alignItems: "center" }}>
           <Box sx={{ textAlign: "center" }}>
             <Box

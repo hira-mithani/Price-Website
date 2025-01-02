@@ -4,9 +4,8 @@ import React from "react";
 const PriceSection = () => {
   return (
     <Box
-      className="container mx-auto px-6 lg:px-16 pt-32" // Increased padding-top for even more space from top
+      className="container mx-auto px-6 lg:px-16 pt-32" 
     >
-      {/* Top spacing */}
       <Box className="flex justify-between mx-5 my-5">
         <Typography variant="h6" className="font-bold">
           Shop by Price
@@ -18,8 +17,6 @@ const PriceSection = () => {
           View All
         </Button>
       </Box>
-
-      {/* Price Range Buttons */}
       <Box className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-4">
         {[
           "Below RS 15000",
@@ -42,9 +39,7 @@ const PriceSection = () => {
           </Box>
         ))}
       </Box>
-
-      {/* Bottom Spacing */}
-      <Box className="my-16"></Box> {/* Bottom margin */}
+      <Box className="my-16"></Box>
     </Box>
   );
 };
